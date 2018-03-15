@@ -15,6 +15,6 @@ while true
 do
         for LED in 1 2 4 8 16 32 64 128
         do
-        i2cset -y ${I2CPORT} ${MCP23017} ${OLAT} ${LED} ${LED} i
+                i2cset -y ${I2CPORT} ${MCP23017} ${OLAT} ${LED} ${LED} i
         done
 done
