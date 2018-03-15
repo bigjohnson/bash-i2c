@@ -6,6 +6,7 @@ OLAT=0x14
 
 # MCP23017 setup
 i2cset -y ${I2CPORT} ${MCP23017} ${IODIR} 0x00
+i2cset -y ${I2CPORT} ${MCP23017} ${OLAT} 0 0 i
 
 # Power off all led on exit...
 trap "{ i2cset -y ${I2CPORT} ${MCP23017} ${OLAT} 0 0 i; }" EXIT
