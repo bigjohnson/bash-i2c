@@ -1,7 +1,10 @@
 #!/bin/bash
 twos() { x=$((16#$1)); [ "$x" -gt 127 ] && ((x=x-256)); echo "$x"; }
+# set up continuous measurement
 i2cset -y 1 0x48 0xac 0x00
+# start continuos measurements        
 i2cset -y 1 0x48 0xee
+# read the temperature 
 DATA=$(i2cget -y 1 0x48 0xAA w)
 if [ "${DATA:2:2}" = "80" ]
 then
