@@ -29,7 +29,7 @@ RNG=8
 # Half scale
 # RNG=0
 
-#Bipolar ( actually bipolar conversion is unimplented )
+#Bipolar ( actually bipolar conversion is unimplmented )
 # Unipolar
 BIPOLAR=0
 # Bipolar
